@@ -1,0 +1,89 @@
+# Generated via get-hooks-as-yaml.py on 2016-08-223 17:31:52 PDT
+- hooks:
+  - {id: ruby-lint}
+  repo: git://github.com/pre-commit/mirrors-ruby-lint
+  sha: master
+- hooks:
+  - {id: csslint}
+  repo: git://github.com/pre-commit/mirrors-csslint
+  sha: master
+- hooks:
+  - {id: eslint}
+  repo: git://github.com/pre-commit/mirrors-eslint
+  sha: master
+- hooks:
+  - {id: check-swagger}
+  repo: git://github.com/jstewmon/check-swagger
+  sha: master
+- hooks:
+  - {id: pylint}
+  repo: git://github.com/pre-commit/mirrors-pylint
+  sha: master
+- hooks:
+  - {id: fixmyjs}
+  repo: git://github.com/pre-commit/mirrors-fixmyjs
+  sha: master
+- hooks:
+  - {id: scss-lint}
+  repo: git://github.com/pre-commit/mirrors-scss-lint
+  sha: master
+- hooks:
+  - {id: coffeelint}
+  repo: git://github.com/pre-commit/mirrors-coffeelint
+  sha: master
+- hooks:
+  - {id: shell-lint}
+  repo: git://github.com/detailyang/pre-commit-shell
+  sha: master
+- hooks:
+  - {id: autopep8}
+  repo: git://github.com/pre-commit/mirrors-autopep8
+  sha: master
+- hooks:
+  - {id: yapf}
+  repo: git://github.com/pre-commit/mirrors-yapf
+  sha: master
+- hooks:
+  - {id: cheetah-reorder-imports}
+  - {id: cheetah-flake}
+  repo: git://github.com/asottile/cheetah_lint
+  sha: master
+- hooks:
+  - {id: puppet-lint}
+  repo: git://github.com/pre-commit/mirrors-puppet-lint
+  sha: master
+- hooks:
+  - {id: reorder-python-imports}
+  repo: git://github.com/asottile/reorder_python_imports
+  sha: master
+- hooks:
+  - {id: jshint}
+  repo: git://github.com/pre-commit/mirrors-jshint
+  sha: master
+- hooks:
+  - {id: autopep8-wrapper}
+  - {id: check-added-large-files}
+  - {id: check-ast}
+  - {id: check-byte-order-marker}
+  - {id: check-case-conflict}
+  - {id: check-docstring-first}
+  - {id: check-json}
+  - {id: pretty-format-json}
+  - {id: check-merge-conflict}
+  - {id: check-symlinks}
+  - {id: check-xml}
+  - {id: check-yaml}
+  - {id: debug-statements}
+  - {id: detect-aws-credentials}
+  - {id: detect-private-key}
+  - {id: double-quote-string-fixer}
+  - {id: end-of-file-fixer}
+  - {id: fix-encoding-pragma}
+  - {id: flake8}
+  - {id: name-tests-test}
+  - {id: pyflakes}
+  - {id: requirements-txt-fixer}
+  - {id: trailing-whitespace}
+  repo: git://github.com/pre-commit/pre-commit-hooks
+  sha: master
+
