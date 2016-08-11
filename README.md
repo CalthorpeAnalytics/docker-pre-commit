@@ -10,7 +10,7 @@ of the required dependencies ahead of time in order to speed up developer on-boa
 
 If you just want to use the pre-built image you can find it on the Docker Hub:
 
-[https://hub.docker.com/r/calthorpeanalytics/postgis/](https://hub.docker.com/r/calthorpeanalytics/pre-commit/)
+[https://hub.docker.com/r/calthorpeanalytics/pre-commit/](https://hub.docker.com/r/calthorpeanalytics/pre-commit/)
 
 or via
 
