@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
       libxml2-dev \
       libxslt1-dev \
       nodejs \
+      python3 \
       python-dev \
       python-pip \
       ruby \
