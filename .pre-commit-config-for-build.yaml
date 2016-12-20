@@ -1,4 +1,4 @@
-# Generated via get-hooks-as-yaml.py on 2016-08-223 17:31:52 PDT
+# Generated via get-hooks-as-yaml.py on 2016-12-355 11:14:04 PST
 - hooks:
   - {id: ruby-lint}
   repo: git://github.com/pre-commit/mirrors-ruby-lint
@@ -80,6 +80,7 @@
   - {id: end-of-file-fixer}
   - {id: fix-encoding-pragma}
   - {id: flake8}
+  - {id: forbid-new-submodules}
   - {id: name-tests-test}
   - {id: pyflakes}
   - {id: requirements-txt-fixer}
