@@ -61,6 +61,10 @@
   repo: git://github.com/pre-commit/mirrors-jshint
   sha: master
 - hooks:
+  - {id: python-import-sorter}
+  repo: git://github.com/FalconSocial/pre-commit-python-sorter
+  sha: master
+- hooks:
   - {id: autopep8-wrapper}
   - {id: check-added-large-files}
   - {id: check-ast}
@@ -87,4 +91,3 @@
   - {id: trailing-whitespace}
   repo: git://github.com/pre-commit/pre-commit-hooks
   sha: master
-
