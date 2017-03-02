@@ -62,7 +62,7 @@
   sha: master
 - hooks:
   - {id: python-import-sorter}
-  repo: git://github.com/FalconSocial/pre-commit-python-sorter
+  repo: git://github.com/CalthorpeAnalytics/pre-commit-python-sorter
   sha: master
 - hooks:
   - {id: autopep8-wrapper}
@@ -89,5 +89,10 @@
   - {id: pyflakes}
   - {id: requirements-txt-fixer}
   - {id: trailing-whitespace}
-  repo: git://github.com/pre-commit/pre-commit-hooks
+  repo: git://github.com/CalthorpeAnalytics/pre-commit-hooks
   sha: master
+- hooks:
+  - {id: forbid-crlf}
+  - {id: forbid-tabs}
+  repo: git://github.com/Lucas-C/pre-commit-hooks.git
+  sha: v1.0.1
