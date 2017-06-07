@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM python:3.5.2
 MAINTAINER Jamie Alessio <jamie@calthorpeanalytics.com>
 
 RUN apt-get update && apt-get install -y \
@@ -7,9 +7,6 @@ RUN apt-get update && apt-get install -y \
       libxml2-dev \
       libxslt1-dev \
       nodejs \
-      python-dev \
-      python-pip \
-      python3 \
       ruby \
       shellcheck \
       zlib1g-dev
