@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
       shellcheck \
       zlib1g-dev
 
-RUN pip install pre-commit==0.13.3
+RUN pip install pre-commit==0.15.2
 
 RUN mkdir /pre-commit
 COPY .pre-commit-config-for-build.yaml /pre-commit/.pre-commit-config.yaml
