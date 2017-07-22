@@ -3,13 +3,22 @@ MAINTAINER Jamie Alessio <jamie@calthorpeanalytics.com>
 
 RUN apt-get update && apt-get install -y \
       build-essential \
+      curl \
       git \
       libxml2-dev \
       libxslt1-dev \
       nodejs \
       ruby \
       shellcheck \
+      unzip \
       zlib1g-dev
+
+RUN mkdir -p /tmp/terraform && \
+    cd /tmp/terraform && \
+    curl -# -o terraform.zip https://releases.hashicorp.com/terraform/0.9.11/terraform_0.9.11_linux_amd64.zip && \
+    unzip terraform.zip && \
+    mv terraform /usr/bin && \
+    rm -rf /tmp/terraform
 
 RUN pip install pre-commit==0.15.2
 
