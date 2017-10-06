@@ -1,4 +1,4 @@
-FROM python:3.6.2
+FROM python:3.6.3
 MAINTAINER Jamie Alessio <jamie@calthorpeanalytics.com>
 
 RUN apt-get update && apt-get install -y \
@@ -17,7 +17,7 @@ RUN mkdir -p /tmp/terraform && \
     cd /tmp/terraform && \
     curl -# -o terraform.zip https://releases.hashicorp.com/terraform/0.9.11/terraform_0.9.11_linux_amd64.zip && \
     unzip terraform.zip && \
-    mv terraform /usr/bin && \
+    mv terraform /usr/local/bin && \
     rm -rf /tmp/terraform
 
 RUN pip install pre-commit==0.15.2
