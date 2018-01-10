@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
       libxslt1-dev \
       nodejs \
       ruby \
+      ruby-dev \
       shellcheck \
       unzip \
       zlib1g-dev
@@ -20,7 +21,7 @@ RUN mkdir -p /tmp/terraform && \
     mv terraform /usr/local/bin && \
     rm -rf /tmp/terraform
 
-RUN pip install pre-commit==0.15.2
+RUN pip install pre-commit==1.4.5
 
 RUN mkdir /pre-commit
 COPY .pre-commit-config-for-build.yaml /pre-commit/.pre-commit-config.yaml
