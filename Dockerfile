@@ -12,7 +12,9 @@ RUN apt-get update && apt-get install -y \
       ruby-dev \
       shellcheck \
       unzip \
-      zlib1g-dev
+      zlib1g-dev && \
+    apt-get clean && \
+    rm -rf /var/lib/apt
 
 RUN mkdir -p /tmp/terraform && \
     cd /tmp/terraform && \
