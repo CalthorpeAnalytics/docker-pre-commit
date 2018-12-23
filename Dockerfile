@@ -22,7 +22,7 @@ RUN mkdir -p /tmp/terraform && \
     mv terraform /usr/local/bin && \
     rm -rf /tmp/terraform
 
-RUN pip install pre-commit==1.12.0
+RUN pip install pre-commit==1.13.0
 
 RUN mkdir /pre-commit
 COPY .pre-commit-config-for-build.yaml /pre-commit/.pre-commit-config.yaml
