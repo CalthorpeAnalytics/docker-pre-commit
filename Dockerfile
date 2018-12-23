@@ -1,5 +1,4 @@
-FROM python:3.6.4
-MAINTAINER Jamie Alessio <jamie@calthorpeanalytics.com>
+FROM python:3.6.7
 
 RUN apt-get update && apt-get install -y \
       build-essential \
@@ -23,7 +22,7 @@ RUN mkdir -p /tmp/terraform && \
     mv terraform /usr/local/bin && \
     rm -rf /tmp/terraform
 
-RUN pip install pre-commit==1.12.0
+RUN pip install pre-commit==1.13.0
 
 RUN mkdir /pre-commit
 COPY .pre-commit-config-for-build.yaml /pre-commit/.pre-commit-config.yaml
