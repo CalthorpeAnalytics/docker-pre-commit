@@ -1,5 +1,4 @@
-FROM python:3.6.4
-MAINTAINER Jamie Alessio <jamie@calthorpeanalytics.com>
+FROM python:3.6.7
 
 RUN apt-get update && apt-get install -y \
       build-essential \
