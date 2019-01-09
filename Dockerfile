@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
 # Use specific version of shellcheck. It's useful to keep
 # this in sync with the version in Homebrew so macOS developer
 # workstations have the same version as this Docker image.
-ARG SHELLCHECK_VERSION=0.5.0
+ARG SHELLCHECK_VERSION=0.6.0
 RUN mkdir /tmp/shellcheck && \
     cd /tmp/shellcheck && \
     curl -# -O "https://storage.googleapis.com/shellcheck/shellcheck-v${SHELLCHECK_VERSION}.linux.x86_64.tar.xz" && \
