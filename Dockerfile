@@ -33,6 +33,6 @@ RUN mkdir -p /tmp/terraform && \
     mv terraform /usr/local/bin && \
     rm -rf /tmp/terraform
 
-RUN pip install pre-commit==1.15.1
+RUN pip install pre-commit==1.17.0
 
 ENTRYPOINT ["pre-commit"]
