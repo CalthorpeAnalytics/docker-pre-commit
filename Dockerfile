@@ -26,9 +26,10 @@ RUN mkdir /tmp/shellcheck && \
     cp shellcheck-v"${SHELLCHECK_VERSION}"/shellcheck /usr/bin/ && \
     rm -rf /tmp/shellcheck
 
+ARG TERRAFORM_VERSION=0.12.16
 RUN mkdir -p /tmp/terraform && \
     cd /tmp/terraform && \
-    curl -# -o terraform.zip https://releases.hashicorp.com/terraform/0.9.11/terraform_0.9.11_linux_amd64.zip && \
+    curl -# -o terraform.zip https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip && \
     unzip terraform.zip && \
     mv terraform /usr/local/bin && \
     rm -rf /tmp/terraform
