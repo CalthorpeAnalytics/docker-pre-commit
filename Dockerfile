@@ -1,17 +1,17 @@
-FROM python:3.7.3-stretch
+FROM python:3.8.1-slim-buster
 
 RUN apt-get update && apt-get install -y \
-      build-essential \
-      curl \
-      git \
-      libxml2-dev \
-      libxslt1-dev \
-      nodejs \
-      ruby \
-      ruby-dev \
-      unzip \
-      xz-utils \
-      zlib1g-dev && \
+    build-essential \
+    curl \
+    git \
+    libxml2-dev \
+    libxslt1-dev \
+    nodejs \
+    ruby \
+    ruby-dev \
+    unzip \
+    xz-utils \
+    zlib1g-dev && \
     apt-get clean && \
     rm -rf /var/lib/apt
 
@@ -26,13 +26,22 @@ RUN mkdir /tmp/shellcheck && \
     cp shellcheck-v"${SHELLCHECK_VERSION}"/shellcheck /usr/bin/ && \
     rm -rf /tmp/shellcheck
 
+ARG TERRAFORM_VERSION=0.10.7
 RUN mkdir -p /tmp/terraform && \
     cd /tmp/terraform && \
-    curl -# -o terraform.zip https://releases.hashicorp.com/terraform/0.9.11/terraform_0.9.11_linux_amd64.zip && \
+    curl -# -o terraform.zip https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip && \
     unzip terraform.zip && \
-    mv terraform /usr/local/bin && \
+    mv terraform /usr/bin && \
     rm -rf /tmp/terraform
 
-RUN pip install pre-commit==1.17.0
+ARG TERRAGRUNT_VERSION=0.17.4
+RUN mkdir /tmp/terragrunt && \
+    cd /tmp/terragrunt && \
+    curl -# -L -o terragrunt https://github.com/gruntwork-io/terragrunt/releases/download/v${TERRAGRUNT_VERSION}/terragrunt_linux_amd64 && \
+    chmod +x terragrunt && \
+    mv terragrunt /usr/bin && \
+    rm -rf /tmp/terragrunt
+
+RUN pip install pre-commit==1.21.0
 
 ENTRYPOINT ["pre-commit"]
